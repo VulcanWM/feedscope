@@ -1,7 +1,5 @@
 import Link from "next/link"
 
-import { siteConfig } from "@/config/site"
-import { buttonVariants } from "@/components/ui/button"
 import { FlameIcon as Fire, Timer, Trophy } from 'lucide-react'
 import {
   Card,
