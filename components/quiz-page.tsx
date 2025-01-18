@@ -29,12 +29,12 @@ export default function QuizPage(props: { quiz: {question: string, answer: strin
   return (
     <section className="container grid items-center gap-6 pb-8 pt-6 md:py-10">
       <div className="flex gap-2">
-        <h1 className="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl">Today's Quiz</h1>
+        <h1 className="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl">Today&apos;s Quiz</h1>
       </div>
       <p>{msg}</p>
       {done ? 
         <div>
-          <p>You've done today's quiz!</p>
+          <p>You&apos;ve done today&apos;s quiz!</p>
         </div>
       :
         <div>

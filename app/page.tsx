@@ -2,7 +2,7 @@ import Link from "next/link"
 
 import { siteConfig } from "@/config/site"
 import { buttonVariants } from "@/components/ui/button"
-import { Crown, FlameIcon as Fire, Timer, Trophy, Users } from 'lucide-react'
+import { FlameIcon as Fire, Timer, Trophy } from 'lucide-react'
 import {
   Card,
   CardContent,

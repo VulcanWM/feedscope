@@ -63,10 +63,10 @@ export default async function Home() {
       <div>
         {todayEntry ? (
           <p className="text-green-600">
-            You have completed today's quiz. {todayEntry.correct ? 'You got the correct answer!' : 'You got the wrong answer!'}
+            You have completed today&apos;s quiz. {todayEntry.correct ? 'You got the correct answer!' : 'You got the wrong answer!'}
           </p>
         ) : (
-          <p className="text-red-600">You have not completed today's quiz. Don't forget to participate!</p>
+          <p className="text-red-600">You have not completed today&apos;s quiz. Don&apos;t forget to participate!</p>
         )}
       </div>
 
