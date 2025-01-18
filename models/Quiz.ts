@@ -1,8 +1,9 @@
 import mongoose, {Schema} from 'mongoose'
 
 const QuizSchema = new mongoose.Schema({
-  title: String,
-  desc: String,
+  question: String,
+  answer: String,
+  category: String,
   options: [Object],
   date: Date
 })
