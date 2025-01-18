@@ -1,7 +1,4 @@
-import Link from "next/link";
-import { siteConfig } from "@/config/site";
-import { buttonVariants } from "@/components/ui/button";
-import { get_top_100_users } from "@/lib/database"; // Ensure this function fetches the top 100 users
+import { get_top_100_users } from "@/lib/database"; // Make sure this function is correctly fetching the top users
 
 export default async function LeaderboardPage() {
   // Fetch the top 100 users
