@@ -85,7 +85,7 @@ export async function get_today_quiz() {
 }
 
 export async function do_quiz(email: string, answer: string){
-    
+
     const user = await get_user_from_email(email)
     if (user == false){
         return "You don't have an account!"
@@ -118,6 +118,13 @@ export async function do_quiz(email: string, answer: string){
         { $inc: { 'options.$.count': 1 } }
     );
     return true;
+}
+
+export async function get_top_100_users(){
+    const topUsers = await User.find()
+      .sort({ points: -1 }) 
+      .limit(100); 
+    return topUsers;
 }
 
 // create_quiz(
