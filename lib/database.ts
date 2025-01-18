@@ -40,15 +40,13 @@ export async function create_user(username: string, email: string) {
     }
     const created = new Date()
     const user = await User.create({
-        username: username, 
-        email: email, 
-        created: created, 
-        banned: false,
-        wins: 0,
-        losses: 0,
-        draws: 0,
+        username: username,
+        email: email,
+        created: created,
+        badges: ['Early User'],
+        points: 0,
         currency: 0,
-        badges: ['Early User'] 
+        done: []
     })
     return true
 }

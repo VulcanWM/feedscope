@@ -4,12 +4,10 @@ const UserSchema = new mongoose.Schema({
   username: String,
   email: String,
   created: Date,
-  banned: Schema.Types.Mixed,
-  wins: Number,
-  losses: Number,
-  draws: Number,
+  badges: [String],
+  points: Number,
   currency: Number,
-  badges: [String]
+  done: [Object]
 })
 
 export default mongoose.models.User || mongoose.model('User', UserSchema);

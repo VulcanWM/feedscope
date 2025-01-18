@@ -48,7 +48,7 @@ export default function Signup() {
         <br/>
         <form className='flex' action={formAction}>
           <p className="text-red-500">{state.message}</p>
-          <Input name="username" id="username" placeholder="username" className="w-[200px] mr-5"/>
+          <Input name="username" id="username" placeholder="username" className="w-[200px] mr-5" autoComplete='off'/>
           <Button type="submit">set username</Button>
         </form>
       </div>
