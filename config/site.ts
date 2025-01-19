@@ -21,6 +21,10 @@ export const siteConfig = {
       title: "Leaderboard",
       href: "/leaderboard",
     },
+    {
+      title: "Previous Quizzes",
+      href: "/previous-quizzes"
+    }
   ],
   links: {
     twitter: "https://twitter.com/vulcanwm",

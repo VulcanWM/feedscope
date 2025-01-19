@@ -128,15 +128,10 @@ export async function get_top_100_users(){
     return topUsers;
 }
 
-// create_quiz(
-//     "What is the powerhouse of the cell?",
-//     "Mitochondria",
-//     "Biology",
-//     [
-//         {"Option": "Nucleus", "Count": 0},
-//         {"Option": "Mitochondria", "Count": 0},
-//         {"Option": "Ribosome", "Count": 0},
-//         {"Option": "Endoplasmic Reticulum", "Count": 0}
-//     ],
-//     "2025-01-19"
-// )
+export async function get_previous_quizzes(){
+    const now = new Date();
+    const today = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()));
+    const previousQuizzes = await Quiz.find({ date: { $lt: today } })
+      .sort({ date: -1 })
+    return previousQuizzes;
+}
