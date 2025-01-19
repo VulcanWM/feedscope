@@ -85,7 +85,6 @@ export async function get_today_quiz() {
 }
 
 export async function do_quiz(email: string, answer: string){
-
     const user = await get_user_from_email(email)
     if (user == false){
         return "You don't have an account!"
@@ -101,21 +100,23 @@ export async function do_quiz(email: string, answer: string){
         return "There is no quiz today!"
     }
     const optionEntry = quiz.options.find((entry: { Option: string; }) => entry.Option === answer);
-    const count = optionEntry ? optionEntry.Count : 0;
+    const count = optionEntry.Count;
     var correct = false;
     if (quiz.answer == answer){
         correct = true;
         if (count < 100){
-            user.points += (100 - count)
+            user.points += (100 - count);
+            user.currency += (100 - count)
         } else {
             user.points += 1;
+            user.currency += 1;
         }
     }
     user.done.push({date: today, correct: correct});
     await user.save();
     await Quiz.updateOne(
         { _id: quiz._id, 'options.Option': answer }, 
-        { $inc: { 'options.$.count': 1 } }
+        { $inc: { 'options.$.Count': 1 } }
     );
     return true;
 }
