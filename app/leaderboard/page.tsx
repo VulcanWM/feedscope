@@ -1,30 +1,23 @@
 import { get_top_100_users } from "@/lib/database";
+import LeaderboardPage from "@/components/leaderboard-page";
+import { getServerSession } from 'next-auth';
+import { authOptions } from '@/lib/auth';
+import { get_user_from_email, get_today_quiz } from "@/lib/database";
 
-export default async function LeaderboardPage() {
-//   const topUsers = await get_top_100_users();
+export default async function Leaderboard() {
+  const authUser = await getServerSession(authOptions);
+  const email = authUser?.user?.email || null
+  var points = null;
+  
+  if (email != null){
+    const userDoc = await get_user_from_email(email)
+    if (userDoc != false){
+        points = userDoc.points
+    }
+  }
+  const topUsers = await get_top_100_users();
 
   return (
-    <section className="container grid items-center gap-6 pb-8 pt-6 md:py-10">
-      <div className="flex max-w-[980px] flex-col items-start gap-2">
-        <h1 className="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl">
-          Leaderboard
-        </h1>
-      </div>
-
-      {/* <div className="w-full max-w-[700px] flex flex-col gap-3"> */}
-        {/* {topUsers.map((user, index) => (
-          <div
-            key={user._id}
-            className="flex items-center justify-between p-4 rounded-lg"
-          >
-            <div className="flex items-center gap-4">
-              <span className="font-bold text-lg">{index + 1}.</span>
-              <span className="text-lg">{user.username}</span>
-            </div>
-            <span className="text-lg font-semibold">{user.points} points</span>
-          </div>
-        ))}
-      </div> */}
-    </section>
+    <LeaderboardPage topUsers={JSON.parse(JSON.stringify(topUsers))} points={points}/>
   );
 }
