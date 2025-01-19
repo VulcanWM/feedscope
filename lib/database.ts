@@ -128,14 +128,14 @@ export async function get_top_100_users(){
 }
 
 // create_quiz(
-//     "Which year did the Titanic sink?",
-//     "1912",
-//     "History",
+//     "What is the powerhouse of the cell?",
+//     "Mitochondria",
+//     "Biology",
 //     [
-//         {"Option": "1908", "Count": 0},
-//         {"Option": "1912", "Count": 0},
-//         {"Option": "1915", "Count": 0},
-//         {"Option": "1920", "Count": 0}
+//         {"Option": "Nucleus", "Count": 0},
+//         {"Option": "Mitochondria", "Count": 0},
+//         {"Option": "Ribosome", "Count": 0},
+//         {"Option": "Endoplasmic Reticulum", "Count": 0}
 //     ],
-//     "2025-01-18"
+//     "2025-01-19"
 // )

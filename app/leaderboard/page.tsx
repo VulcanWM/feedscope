@@ -1,8 +1,7 @@
-import { get_top_100_users } from "@/lib/database"; // Make sure this function is correctly fetching the top users
+import { get_top_100_users } from "@/lib/database";
 
 export default async function LeaderboardPage() {
-  // Fetch the top 100 users
-  const topUsers = await get_top_100_users();
+//   const topUsers = await get_top_100_users();
 
   return (
     <section className="container grid items-center gap-6 pb-8 pt-6 md:py-10">
@@ -12,8 +11,8 @@ export default async function LeaderboardPage() {
         </h1>
       </div>
 
-      <div className="w-full max-w-[700px] flex flex-col gap-3">
-        {topUsers.map((user, index) => (
+      {/* <div className="w-full max-w-[700px] flex flex-col gap-3"> */}
+        {/* {topUsers.map((user, index) => (
           <div
             key={user._id}
             className="flex items-center justify-between p-4 rounded-lg"
@@ -25,7 +24,7 @@ export default async function LeaderboardPage() {
             <span className="text-lg font-semibold">{user.points} points</span>
           </div>
         ))}
-      </div>
+      </div> */}
     </section>
   );
 }

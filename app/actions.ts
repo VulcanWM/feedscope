@@ -25,7 +25,7 @@ export async function createUserFunction(prevState: { message: string } | { mess
 }
 
 export async function doQuizFunction(answer: string) {
-    const ip = headers().get("x-forwarded-for") ?? "unknown";
+    const ip = (await headers()).get("x-forwarded-for") ?? "unknown";
     const isRateLimited = rateLimit(ip);
     if (isRateLimited){
         return "You are being rate limited! Please try again later."
