@@ -15,10 +15,33 @@ export const metadata: Metadata = {
     template: `%s - ${siteConfig.name}`,
   },
   description: siteConfig.description,
-  // themeColor: [
-  //   { media: "(prefers-color-scheme: light)", color: "white" },
-  //   { media: "(prefers-color-scheme: dark)", color: "black" },
-  // ],
+  openGraph: {
+    title: siteConfig.name,
+    description: siteConfig.description,
+    // images: ['https://recallit.vercel.app/recallit_banner.png'],
+    type: "website",
+    url: "https://www.feedscope.xyz",
+    siteName: siteConfig.name
+  },
+  keywords: [
+    "daily quiz",
+    "online quizzes",
+    "quiz streaks",
+    "leaderboard trivia",
+    "random quiz topics",
+    "competitive quizzes",
+    "daily trivia challenge",
+    "test your knowledge",
+    "fun educational quizzes",
+    "quiz game platform",
+    "streak-based quiz",
+    "daily trivia game",
+    "trivia leaderboard",
+    "knowledge test game",
+    "quiz competition"
+  ],
+  creator: 'VulcanWM',
+  robots: "index, follow",
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon-16x16.png",
