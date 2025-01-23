@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: siteConfig.name,
     description: siteConfig.description,
-    // images: ['https://recallit.vercel.app/recallit_banner.png'],
+    images: ['https://www.feedscope.xyz/feedscope_banner.png'],
     type: "website",
     url: "https://www.feedscope.xyz",
     siteName: siteConfig.name

@@ -35,7 +35,7 @@ export default function IndexPage() {
         </p>
         <div className="mt-8 flex justify-center gap-4">
           <Button size="lg" asChild>
-            <Link href="/dashboard">Join Now</Link>
+            <Link href="/quiz">Join Now</Link>
           </Button>
         </div>
       </section>
@@ -173,7 +173,7 @@ export default function IndexPage() {
             streak today!
           </p>
           <Button size="lg" asChild>
-            <Link href="/dashboard">Get Started Now</Link>
+          <Link href="/quiz">Get Started Now</Link>
           </Button>
         </div>
       </section>

@@ -32,6 +32,10 @@ export default function QuizPage(props: { quiz: {question: string, answer: strin
         <h1 className="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl">Today&apos;s Quiz</h1>
       </div>
       <p>{msg}</p>
+      {/* {msg.startsWith("Answer submitted!") && <div>
+        <p>Can your friends do as good as you?</p>
+        
+      </div>} */}
       {done ? 
         <div>
           <p>You&apos;ve done today&apos;s quiz!</p>

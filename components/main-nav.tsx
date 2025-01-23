@@ -7,7 +7,7 @@ import { useState } from "react"
 import { NavItem } from "@/types/nav"
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
-import { Gift, Menu, X } from "lucide-react"
+import { Menu, X } from "lucide-react"
 
 interface MainNavProps {
   items?: NavItem[]
