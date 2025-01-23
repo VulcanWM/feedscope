@@ -58,12 +58,14 @@ export default function QuizPage(props: {
               <CardDescription>Compete with your friends in the leaderboard</CardDescription>
             </CardHeader>
             <CardContent>
-            <Button onClick={copyLink}>
-              Copy Quiz Link
-            </Button>
-            <Link href="/leaderboard" className={buttonVariants({ variant: "outline" })}>
-              View Leaderboard
-            </Link>
+              <div className="flex gap-4 flex-wrap">
+                <Button onClick={copyLink}>
+                  Copy Quiz Link
+                </Button>
+                <Link href="/leaderboard" className={buttonVariants({ variant: "outline" })}>
+                  View Leaderboard
+                </Link>
+              </div>
             </CardContent>
           </Card>
 
